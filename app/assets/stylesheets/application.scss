@@ -1,2 +1,13 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "navbar";
+@import "projects";
+a{
+    color: rgb(39, 39, 39);
+    text-decoration:none; 
+}
+a:hover{
+    color: rgb(39, 39, 39);
+
+    text-decoration:none; 
+}
