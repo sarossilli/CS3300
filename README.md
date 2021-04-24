@@ -1,24 +1,12 @@
-# README
+# Sam Rossilli CS 3300 Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Travis CI:
+[![Build Status](https://travis-ci.com/sarossilli/CS3300.svg?branch=master)](https://travis-ci.com/sarossilli/CS3300)
+<br>
+link:
+https://travis-ci.com/github/sarossilli/CS3300
 
-Things you may want to cover:
+<br> 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Heroku Link:
+https://secure-forest-94141.herokuapp.com/
