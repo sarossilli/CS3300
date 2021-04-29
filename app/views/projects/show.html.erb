@@ -8,4 +8,9 @@
     <p><%= @project.description %></p>
     <h5>Technologies uesd: </h5>
     <p><%= @project.short_desc %></p>
+    <%if current_user%>
+    <%= link_to 'Edit', edit_project_url, class: "btn btn-lg"%>
+    <%= link_to 'Destroy',  { action: :destroy, id: @project.id }, method: :delete, data: { confirm: 'Are you sure?' }, %>
+
+    <%end%>
 </div>

@@ -47,7 +47,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'mini_racer'
 gem 'simplecov', require: false, group: :test
-
+gem 'devise'
 # Adds support for Capybara system testing and selenium driver
 gem 'capybara'
 group :development, :test do
