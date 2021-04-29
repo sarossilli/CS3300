@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_190549) do
+ActiveRecord::Schema.define(version: 2021_04_29_204131) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_04_29_190549) do
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.text "short_desc"
+    t.string "short_desc", default: "--- []\n"
     t.string "demo_video"
     t.string "slug"
     t.datetime "created_at", null: false

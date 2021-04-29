@@ -1,5 +1,16 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
+  
+  def tech_to_a
+    # get the params[:group][:cords], if it's empty use empty array string
+    arr = tech.split(" ")
+    # parse it, possibly you also want to handle parse exceptions
+    # and transform parsed array as something else
+    # also, user will be able to save any json object
+    # to your serialized field, and it will be parsed
+    # accordingly: either to array or to hash
+    return arr
+  end
 
   # GET /projects or /projects.json
   def index
@@ -21,6 +32,7 @@ class ProjectsController < ApplicationController
 
   # POST /projects or /projects.json
   def create
+
     @project = Project.new(project_params)
 
     respond_to do |format|
