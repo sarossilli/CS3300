@@ -17,4 +17,4 @@ deploy:
  app: secure-forest-94141
  run: "rake db:migrate"
  on:
-  branch: main_or_master
+  branch: master
