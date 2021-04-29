@@ -12,9 +12,9 @@ RSpec.describe Project, type: :model do
         expect(project.valid?).to eq(false)
       end
 
-      it "ensures the shortDescription is present" do
+      it " shortDescription Doesnt need to be present" do
         project = Project.new(title: "Title", description: "Some description content goes here", demo_video: "dhealf.com")
-        expect(project.valid?).to eq(false)
+        expect(project.valid?).to eq(true)
       end
 
       it "ensures the videoDemo is present" do
