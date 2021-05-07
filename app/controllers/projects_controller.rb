@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
+    
   end
 
   # GET /projects/new
@@ -34,7 +35,7 @@ class ProjectsController < ApplicationController
   def create
 
     @project = Project.new(project_params)
-
+    
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: "Project was successfully created." }
@@ -49,6 +50,7 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1 or /projects/1.json
   def update
     respond_to do |format|
+      @project.img.attach(project_params[:img])
       if @project.update(project_params)
         format.html { redirect_to @project, notice: "Project was successfully updated." }
         format.json { render :show, status: :ok, location: @project }
@@ -61,6 +63,7 @@ class ProjectsController < ApplicationController
 
   # DELETE /projects/1 or /projects/1.json
   def destroy
+    @project.img.purge_later
     @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
@@ -76,6 +79,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:title, :description, :short_desc, :demo_video)
+      params.require(:project).permit(:title, :description, :short_desc, :demo_video, :img)
     end
 end

@@ -50,6 +50,11 @@ gem 'simplecov', require: false, group: :test
 gem 'devise'
 # Adds support for Capybara system testing and selenium driver
 gem 'capybara'
+
+gem "paperclip", "~> 6.0.0"
+
+gem "google-cloud-storage", "~> 1.11", require: false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
