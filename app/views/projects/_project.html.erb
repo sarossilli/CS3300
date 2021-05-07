@@ -1,8 +1,11 @@
 <div class='col-sm-6 col-lg-4'>
   <div class="card mt-4 shadow bg-white rounded">
     <%= link_to project do %>
-      <img class="card-img-top" src="https://dummyimage.com/600x400/696969/fff" alt="Card image cap">
-    <% end %>
+              <!-- Preview image-->
+      <%if project.img.attached?%>
+        <%= image_tag url_for(project.img), :class => "img-fluid rounded p-1" %>
+      <% end %>
+    <%end%>
 
     <div class="card-block">
       <h4 class="card-title"><%= link_to project.title, project %></h4>
