@@ -18,8 +18,19 @@ local:
 google:
   service: GCS
   project: portfolio-313015
-  credentials: <%= Rails.root.join("config/gcloud.key") %>
+  credentials: 
+    type: "service_account"
+    project_id: "portfolio-313015"
+    private_key_id: <%= ENV['gcloud_key_id'] %>
+    private_key: <%= ENV['gcloud_key'] %>
+    client_email: "railsapp@portfolio-313015.iam.gserviceaccount.com"
+    client_id: "104751408549563410607"
+    auth_uri: "https://accounts.google.com/o/oauth2/auth"
+    token_uri: "https://oauth2.googleapis.com/token"
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/railsapp%40portfolio-313015.iam.gserviceaccount.com"
   bucket: srossill_img_bucket
+
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
