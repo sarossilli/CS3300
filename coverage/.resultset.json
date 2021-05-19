@@ -959,7 +959,7 @@
           null,
           null,
           1,
-          4,
+          3,
           null,
           null,
           null,
@@ -1034,22 +1034,8 @@
           1,
           null
         ]
-      },
-      "/home/sarossilli/CS3300/spec/requests/sessions_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1620761881
+    "timestamp": 1621446600
   }
 }
