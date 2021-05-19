@@ -12,6 +12,12 @@
                             <img class="img-fluid rounded p-1" src=<%=(url_for(@project.img))%> alt="...">
                         <% end %>
                     <hr>
+                    <hr>
+                    <!-- Preview image-->
+                        <%if @project.demo_video.attached?%>
+                            <a href=<%=@project.demo_video%>> Link to github </a>
+                        <% end %>
+                    <hr>
                     <!-- Post content-->
                     <p><%= @project.description %> </p>
                     <hr>
