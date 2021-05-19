@@ -14,8 +14,8 @@
                     <hr>
                     <hr>
                     <!-- Preview image-->
-                        <%if @project.demo_video.attached?%>
-                            <a href=<%=@project.demo_video%>> Link to github </a>
+                        <%if not @project.demo_video.to_s.strip.empty?%>
+                            <a href=<%=@project.demo_video%>> Link to github</a>
                         <% end %>
                     <hr>
                     <!-- Post content-->
